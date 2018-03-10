@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+{% block body_block%}
+<h1>This is home!</h1>
+<h2>Killing white people for money? What's not to like? - Django FreeMan</h2>
+<br>
+<h1>{{ django | cut:"am" }}
+{{ killed | date }}
+</h1>
+{% endblock %}

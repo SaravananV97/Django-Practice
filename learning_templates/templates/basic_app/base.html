@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Base Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="{% url "index" %}">Home</a>
+      <ul class="navbar-nav">
+   <li class="nav-item active">
+     <a class="nav-link" href="{% url "index" %}">Index</a>
+   </li>
+   <li class="nav-item">
+     <a class="nav-link" href="{% url "basic_app:other_page_name" %}">Other</a>
+   </li>
+   <li class="nav-item">
+     <a class="nav-link" href="{% url "basic_app:relurl_page" %}">Relative URL</a>
+   </li>
+   <li class="nav-item">
+     <a class="nav-link disabled" href="{% url "admin:index" %}">Admin</a>
+   </li>
+ </ul>
+</nav>
+<div class="container">
+  {% block body_block %}
+  {% endblock %}
+</div>
+  </body>
+</html>
